@@ -1,116 +1,71 @@
-/* "rem" (root em) es una unidad de medida relativa en CSS que se basa en el tamaño de la fuente del elemento raíz del documento (normalmente el elemento <html>). Un "rem" es igual al tamaño de la fuente definida para el elemento raíz. Por ejemplo, si el tamaño de la fuente del elemento raíz (<html>) es de 16 píxeles, 1 rem será igual a 16 píxeles.
-
-Todos los elementos de HTML que utilizan unidades rem para definir su estilo dependen del tamaño de la fuente del elemento raíz (<html>). Esto significa que cualquier cambio en el tamaño de la fuente del elemento raíz afectará proporcionalmente a todos esos elementos.
-*/
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    font-size: 16px; /* Aquí se define que 1 rem = 16px */
-}
-
-.main-content__button {
-    display: block;
-    width: 100%;
-    max-width: 200px;
-    margin: 2rem auto;
-    padding: 0.5rem 1rem;
-    background-color: #0072ce;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    text-align: center;
-    font-size: 1rem;
-}
-
-.main-content__button:hover {
-    background-color: #005bb5;
-}
-
+/* css/index.css */
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+    font-family: Titillium Web;
     background-color: #f4f4f4;
-    color: #333;
+    margin: 0px 100px;
+    padding: 0px;
 }
 
-.header {
-    background-color: #0072ce;
-    padding: 1rem;
-    text-align: left;
-    color: #fff;
+header{
+    background-color: blue;
+    color: #f4f4f4;
 }
 
-.header__title {
-    margin: 0;
-}
-
-.main-content {
-    padding: 2rem;
-}
-
-.dashboard {
-    /* Define q el contenedor .dashboard es un contenedor flexible */
+.container {
     display: flex;
-    /* los elementos hijos se envuelven automáticamente en líneas adicionales si no caben en una sola línea */
     flex-wrap: wrap;
-    /* Establece el espacio entre los elementos hijos dentro del contenedor, asegura que tengan un margen uniforme entre sí */
-    gap: 2rem;
+    justify-content: center;
+    padding: 15px;
 }
 
-
-.dashboard__item {
-    /* flex grow - flex shrink - flex basis  se calcula el 50% del ancho del contenedor menos 2rem */
-    flex: 1 1 calc(50% - 2rem);
-    background-color: #fff;
-    border: 1px solid #ccc;
-    padding: 1rem;
+.chart-container {
+    background-color: #ffffff;
     border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.dashboard__title {
-    margin-bottom: 1rem;
-    font-size: 1.25rem;
-    color: #0072ce;
-}
-
-.dashboard__chart {
+.chart-container__title{
+    margin: 2px;
+    align-self: flex-start;
+    text-align: left;
     width: 100%;
-    height: 350px;
-    margin-bottom: 1rem;
+}
+
+.chart-container__header{
+    width: 100%;
+    display: flex;
+}
+
+.channel-select__label{
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.channel-select__dropdow{
+    margin-left: 5px;
+    padding: 5px;
+}
+
+.chart-container__description {
+    align-self: flex-start;
+    text-align: left;
+    width: 100%;
+}
+
+
+
+
+.chart-container__iframe {
+    width: 640px;
+    height: 300px;
+    max-width: 100%;
+    max-height: 100%;
     border: none;
 }
 
-.dashboard__description {
-    font-size: 0.9rem;
-    color: #666;
-}
-
-/* Media Query
-La condición (max-width: 768px) indica que los estilos contenidos dentro de este bloque se aplicarán solo cuando el ancho de la ventana del navegador sea de 768 píxeles o menos.
-
-flex: 1 1 100%;
-La regla flex define el comportamiento del elemento .dashboard__item cuando se utiliza en un contenedor flexible (flex container). La propiedad flex es una abreviatura para varias propiedades flexibles que definen cómo los elementos dentro de un contenedor flexible deben comportarse:
-
-flex-grow: 1;
-el elemento debe crecer para llenar el espacio disponible en el contenedor. Un valor de 1 significa que el elemento puede crecer si hay espacio adicional disponible.
-
-flex-shrink: 1;
-Esto permite que el elemento se reduzca en tamaño si es necesario. Un valor de 1 significa que el elemento puede encogerse si el espacio es limitado.
-
-flex-basis: 100%;
-Esto define la base flexible inicial del elemento antes de aplicar los valores de crecimiento (flex-grow) o encogimiento (flex-shrink). Un valor de 100% significa que el elemento debería ocupar inicialmente el 100% del ancho del contenedor flexible.
-*/
-
-@media (max-width: 768px) {
-    .dashboard__item {
-        flex: 1 1 100%;
-    }
-}
