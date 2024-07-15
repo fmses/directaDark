@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informe - Directa</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+
+    <header class="header"> <!-- Bloque -->
+        <h1 class="header__title">Comunicación Directa</h1> <!-- Elemento -->
+    </header>
+
+    <!-- Block (block), Element (__element), Modifier (--modifier) -->
+
+    <main class="main-content">
+
+
+        <button class="main-content__button" onclick="window.location.href='LINK_TO_GOOGLE_SHEET'">Ver Planilla</button>
+
+        <section class="dashboard">
+            <div class="dashboard__item">
+                <h2 class="dashboard__title">Asignaciones</h2>
+                <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSs-EbAhYXIdRzTfTjPYEDJrSe5Jw3WvD17FMyZVopUbjDFBsc8cRiLZQDeFejoYg/pubchart?oid=386433162&format=interactive" class="dashboard__chart" frameborder="0"></iframe>
+                <p class="dashboard__description">Descripción del gráfico 1.</p>
+            </div>
+
+            <div class="dashboard__item">
+                <h2 class="dashboard__title">Canales</h2>
+                <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSs-EbAhYXIdRzTfTjPYEDJrSe5Jw3WvD17FMyZVopUbjDFBsc8cRiLZQDeFejoYg/pubchart?oid=1755801386&format=interactive" class="dashboard__chart" frameborder="0"></iframe>
+                <p class="dashboard__description">Descripción del gráfico 2.</p>
+            </div>
+
+            <div class="dashboard__item">
+                <h2 class="dashboard__title">Gráfico 3</h2>
+                <iframe src="LINK_TO_GOOGLE_SHEET_CHART_3" class="dashboard__chart" frameborder="0"></iframe>
+                <p class="dashboard__description">Descripción del gráfico 3.</p>
+            </div>
+
+            <div class="dashboard__item">
+                <h2 class="dashboard__title">Gráfico 4</h2>
+                <iframe src="LINK_TO_GOOGLE_SHEET_CHART_4" class="dashboard__chart" frameborder="0"></iframe>
+                <p class="dashboard__description">Descripción del gráfico 4.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- nos aseguramos q el html se cargue al final del html -->
+    <script src="js/index.js"></script>
+</body>
+</html>
