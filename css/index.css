@@ -47,7 +47,7 @@ header{
     font-weight: bold;
 }
 
-.channel-select__dropdow{
+.channel-select__dropdown{
     margin-left: 5px;
     padding: 5px;
 }
@@ -58,9 +58,6 @@ header{
     width: 100%;
 }
 
-
-
-
 .chart-container__iframe {
     width: 640px;
     height: 300px;
@@ -69,3 +66,9 @@ header{
     border: none;
 }
 
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+    body {
+        margin: 0px;
+    }
+}
