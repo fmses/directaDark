@@ -14,8 +14,9 @@ header{
 .container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: left;
     padding: 15px;
+
 }
 
 .chart-container {
