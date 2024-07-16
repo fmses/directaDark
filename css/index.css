@@ -75,6 +75,7 @@ header{
 
 /* Media query for mobile devices */
 @media (max-width: 952px) {
+/* 952 porque es cuando comienza el scroll en los graficos */
     body {
         margin: 0px;
     }
@@ -85,7 +86,7 @@ header{
 
     .chart-container{
         margin: 0px;
-        margin-bottom: 10px;
+        margin-bottom: 40px;
     }
 
 }
