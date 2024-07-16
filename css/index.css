@@ -30,26 +30,33 @@ header{
     align-items: center;
 }
 
+.chart-container__header{
+    width: 100%;
+    display: flex;
+    height: 60px;
+}
+
 .chart-container__title{
     margin: 2px;
     align-self: flex-start;
     text-align: left;
-    width: 100%;
+    width: 50%;
 }
 
-.chart-container__header{
-    width: 100%;
-    display: flex;
+.chart-container__select-container{
+    display:flex;
+    width: 50%;
+    justify-content: right;
+    align-items: center;
 }
 
 .channel-select__label{
-    margin-right: 10px;
     font-weight: bold;
+    margin-right: 10px;
 }
 
 .channel-select__dropdown{
-    margin-left: 5px;
-    padding: 5px;
+    height: 50%;
 }
 
 .chart-container__description {
