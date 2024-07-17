@@ -65,12 +65,12 @@ body {
     margin-right: 10px;
 }
 
-.channel-select__label{
+.canales-select__label{
     font-weight: bold;
     margin-right: 10px;
 }
 
-.channel-select__dropdown{
+.canales-select__dropdown{
     height: 50%;
 }
 
