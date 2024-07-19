@@ -60,7 +60,7 @@ body {
     color: aqua;
     border: 1px 2px 3px solid;
     border-top: aqua;
-    height: 8%;
+    height: 9%;
 }
 
 .chart-container__select-container{
@@ -95,7 +95,6 @@ body {
     max-height: 100%;
     border: none;
 }
-
 
 
 /* Media query for mobile devices */
