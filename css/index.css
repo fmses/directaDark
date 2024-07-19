@@ -24,20 +24,36 @@ body {
     background-image: url(../images/Bgd_PRG_baja.jpg);
 }
 
+
+
 .container {
     display: grid;
     /* La función repeat() es una forma abreviada de "repeat(count, track-size)."
       creamos 2 columnas (count es 2), y cada una tiene un tamaño de 1fr (track-size es 1fr)
       "1fr" (fracción)la columna debe ocupar una fracción igual del espacio disponible./*/
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px; /* Ajusta el espacio entre los contenedores según lo necesites */
+    gap: 30px; /* Ajusta el espacio entre los contenedores según lo necesites */
     padding: 15px;
     margin: 0;
 }
 
+.seccion{
+    grid-column: span 2;
+    border:0.1px solid;
+    border-color: rgb(6, 248, 232, 0.5);
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(127, 255, 212, 0.5);
+}
+
+.seccion-container__title{
+    margin: 5px 0px;
+    padding: 0px 10px;
+    color:rgb(127, 255, 212)
+}
+
 .chart-container {
-    /* border:2px solid; */
-    /* border-color: rgb(206, 206, 206); */
+/*     border:0.1px solid;
+    border-color: rgb(6, 248, 232, 0.5); */
     background-color: rgba(80, 80, 80, 0.3);
     border-radius: 5px;
     box-shadow: 0 0 5px rgba(190, 190, 190, 0.5);
@@ -59,9 +75,9 @@ body {
     align-self: flex-start;
     text-align: left;
     width: 100%;
-    color: aqua;
+    color: aquamarine;
     border: 1px 2px 3px solid;
-    border-top: aqua;
+    border-top: aquamarine;
     height: 9%;
 }
 
@@ -109,9 +125,13 @@ body {
         grid-template-columns: 1fr;
     }
 
+    .seccion{
+        grid-column: span 1;
+    }
+
     .chart-container{
         margin: 0px;
-        margin-bottom: 40px;
+        grid-column: span 1;
     }
 
 }
