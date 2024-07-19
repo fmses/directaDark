@@ -25,26 +25,28 @@ body {
 }
 
 .container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    /* La función repeat() es una forma abreviada de "repeat(count, track-size)."
+      creamos 2 columnas (count es 2), y cada una tiene un tamaño de 1fr (track-size es 1fr)
+      "1fr" (fracción)la columna debe ocupar una fracción igual del espacio disponible./*/
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px; /* Ajusta el espacio entre los contenedores según lo necesites */
     padding: 15px;
-    gap: 2px;
-    margin: 0px 0px;
+    margin: 0;
 }
 
 .chart-container {
-    background-color: rgba(80, 80, 80, 0.3);
-    border-radius: 5px;
     /* border:2px solid; */
     /* border-color: rgb(206, 206, 206); */
+    background-color: rgba(80, 80, 80, 0.3);
+    border-radius: 5px;
     box-shadow: 0 0 5px rgba(190, 190, 190, 0.5);
-    margin: 10px;
     padding: 10px;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
 }
 
 .chart-container__header{
@@ -97,13 +99,14 @@ body {
 }
 
 
-/* Media query for mobile devices */
-@media (max-width: 952px) {
+/* Media query for mobile devices 952*/
+@media (max-width: 1344px) {
 /* 952 es cuando comienza el scroll en los graficos */
 
     .container{
-        padding: 30px 0px;
-        margin: 0px;
+        /* padding: 30px 0px;
+        margin: 0px; */
+        grid-template-columns: 1fr;
     }
 
     .chart-container{
