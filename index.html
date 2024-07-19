@@ -16,8 +16,12 @@
     </header>
 
     <div class="container">
+        <div class="seccion">
+            <h2 class="seccion-container__title"> Envíos válidos </h2>
+        </div>
+
         <div class="chart-container" id="chart1">
-            <h2 class="chart-container__title">Envíos por mes</h2>
+            <h3 class="chart-container__title">Mes / Canal</h3>
             <!-- Gráfico 1 de Google Sheets -->
             <iframe class="chart-container__iframe" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSs-EbAhYXIdRzTfTjPYEDJrSe5Jw3WvD17FMyZVopUbjDFBsc8cRiLZQDeFejoYg/pubchart?oid=1632282870&format=interactive"></iframe>
             <p class="chart-container__description">Descripcion de Grafico Asignaciones</p>
@@ -25,7 +29,7 @@
 
         <div class="chart-container" id="chart2">
             <div class="chart-container__header">
-                <h2 class="chart-container__title">Canales</h2>
+                <h3 class="chart-container__title">Canales</h2>
                 <div class="chart-container__select-container">
                     <label for="canales-select" class="canales-select__label">Seleccione tipo</label>
                     <select name="canal" id="canales-select" class="canales-select__dropdown">
@@ -40,19 +44,6 @@
             <p class="chart-container__description">Descripcion de Grafico Canales</p>
         </div>
 
-        <div class="chart-container" id="chart3">
-            <h2 class="chart-container__title">Asignaciones</h2>
-            <!-- Gráfico 1 de Google Sheets -->
-            <iframe class="chart-container__iframe" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSs-EbAhYXIdRzTfTjPYEDJrSe5Jw3WvD17FMyZVopUbjDFBsc8cRiLZQDeFejoYg/pubchart?oid=2140187221&format=interactive"></iframe>
-            <p class="chart-container__description">Descripcion de Grafico Asignaciones</p>
-        </div>
-
-        <div class="chart-container" id="chart4">
-            <h2 class="chart-container__title">Asignaciones</h2>
-            <!-- Gráfico 1 de Google Sheets -->
-            <iframe class="chart-container__iframe" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSs-EbAhYXIdRzTfTjPYEDJrSe5Jw3WvD17FMyZVopUbjDFBsc8cRiLZQDeFejoYg/pubchart?oid=386433162&format=interactive"></iframe>
-            <p class="chart-container__description">Descripcion de Grafico Asignaciones</p>
-        </div>
 
     </div>
     <script src="js/index.js"></script>
