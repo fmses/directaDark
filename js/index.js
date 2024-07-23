@@ -1,18 +1,16 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Obtener el elemento del dropdown por su ID
-    const canalesSelect = document.getElementById('canales-select');
-    // Obtener el iframe que se actualizará por su clase (asumiendo que es el primero con esa clase)
-    const chartIframe = document.querySelector('#chart2 .chart-container__iframe');
-    // Definir las URLs de los gráficos según las opciones del dropdown
+    const periodicidadSelect = document.getElementById('periodicidad-select');
+    const chartIframe = document.querySelector('#chart4 .chart-container__iframe');
     const chartUrls = {
-        SMS: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSs-EbAhYXIdRzTfTjPYEDJrSe5Jw3WvD17FMyZVopUbjDFBsc8cRiLZQDeFejoYg/pubchart?oid=1755801386&format=interactive',
-        PUSH: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSs-EbAhYXIdRzTfTjPYEDJrSe5Jw3WvD17FMyZVopUbjDFBsc8cRiLZQDeFejoYg/pubchart?oid=2140187221&format=interactive',
-        MAIL: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSs-EbAhYXIdRzTfTjPYEDJrSe5Jw3WvD17FMyZVopUbjDFBsc8cRiLZQDeFejoYg/pubchart?oid=386433162&format=interactive'
+      aDemanda: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTo0Ygg87eW3QuRh0dXy5Z3v_AmGJreCeXnvV_1fIa5SSAmbY44jlIzBWVVKv3NU26JHsPDQaL1LHXC/pubchart?oid=744059156&format=interactive',
+      Diaria: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTo0Ygg87eW3QuRh0dXy5Z3v_AmGJreCeXnvV_1fIa5SSAmbY44jlIzBWVVKv3NU26JHsPDQaL1LHXC/pubchart?oid=1418436833&format=interactive',
+      Eventual: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTo0Ygg87eW3QuRh0dXy5Z3v_AmGJreCeXnvV_1fIa5SSAmbY44jlIzBWVVKv3NU26JHsPDQaL1LHXC/pubchart?oid=1363399549&format=interactive',
+      Mensual: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTo0Ygg87eW3QuRh0dXy5Z3v_AmGJreCeXnvV_1fIa5SSAmbY44jlIzBWVVKv3NU26JHsPDQaL1LHXC/pubchart?oid=881729646&format=interactive'
     };
     // Agregar un event listener al dropdown para detectar cambios
-    canalesSelect.addEventListener('change', function() {
+    periodicidadSelect.addEventListener('change', function() {
         // Obtener el valor seleccionado del dropdown
-        const selectedOption = canalesSelect.value;
+        const selectedOption = periodicidadSelect.value;
         // Actualizar el src del iframe con la URL correspondiente
         chartIframe.src = chartUrls[selectedOption];
     });
