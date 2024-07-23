@@ -17,67 +17,63 @@
         </header>
 
         <div class="seccion">
-            <h2 class="seccion-container__title"> Envíos válidos </h2>
+            <h2 class="seccion-container__title">Envíos válidos por mes</h2>
         </div>
 
         <div class="chart-container" id="chart1">
-            <h3 class="chart-container__title">Mes / Canal</h3>
-            <!-- Gráfico 1 de Google Sheets -->
+            <h3 class="chart-container__title">Por Canal</h3>
             <iframe class="chart-container__iframe" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSs-EbAhYXIdRzTfTjPYEDJrSe5Jw3WvD17FMyZVopUbjDFBsc8cRiLZQDeFejoYg/pubchart?oid=1632282870&format=interactive"></iframe>
             <p class="chart-container__description">Descripcion de Grafico Asignaciones</p>
         </div>
-
+        
         <div class="chart-container" id="chart2">
             <div class="chart-container__header">
-                <h3 class="chart-container__title">Canales</h2>
+                <h3 class="chart-container__title">Por Comunicación</h3>
                 <div class="chart-container__select-container">
-                    <label for="canales-select" class="canales-select__label">Seleccione tipo</label>
-                    <select name="canal" id="canales-select" class="canales-select__dropdown">
-                        <option value="SMS">SMS</option>
-                        <option value="PUSH">PUSH</option>
-                        <option value="MAIL">MAIL</option>
+                    <label for="comunicacion-select" class="comunicacion-select__label">Seleccione por tipo</label>
+                    <select name="comunicacion" id="comunicacion-select" class="comunicacion-select__dropdown">
+                        <option value="asignaciones">Asignaciones</option>
+                        <option value="previsional">Previsional</option>
+                        <option value="tramitesYservicios">Trámites y Servicios</option>
+                        <option value="prog ramas">Programas</option>
+                        <option value="organismoExternos">Organismos Externos</option>
                     </select>
                 </div>
             </div>
-            <!-- Gráfico 2 de Google Sheets -->
-            <iframe class="chart-container__iframe" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSs-EbAhYXIdRzTfTjPYEDJrSe5Jw3WvD17FMyZVopUbjDFBsc8cRiLZQDeFejoYg/pubchart?oid=1689806941&format=interactive"></iframe>
-            <p class="chart-container__description">Descripcion de Grafico Canales</p>
+            <iframe class="chart-container__iframe" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTo0Ygg87eW3QuRh0dXy5Z3v_AmGJreCeXnvV_1fIa5SSAmbY44jlIzBWVVKv3NU26JHsPDQaL1LHXC/pubchart?oid=1411195835&format=interactive"></iframe>
+            <p class="chart-container__description">Descripcion de Grafico Asignaciones</p>
         </div>
-
-
     </div>
 
     <div class="container">
         <div class="seccion">
-            <h2 class="seccion-container__title"> Envíos válidos </h2>
+            <h2 class="seccion-container__title"> Envíos válidos por Canal </h2>
         </div>
 
-        <div class="chart-container" id="chart1">
-            <h3 class="chart-container__title">Mes / Canal</h3>
-            <!-- Gráfico 1 de Google Sheets -->
-            <iframe class="chart-container__iframe" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSs-EbAhYXIdRzTfTjPYEDJrSe5Jw3WvD17FMyZVopUbjDFBsc8cRiLZQDeFejoYg/pubchart?oid=1632282870&format=interactive"></iframe>
+        <div class="chart-container" id="chart3">
+            <h3 class="chart-container__title">Total por Canal</h3>
+            <iframe class="chart-container__iframe" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTo0Ygg87eW3QuRh0dXy5Z3v_AmGJreCeXnvV_1fIa5SSAmbY44jlIzBWVVKv3NU26JHsPDQaL1LHXC/pubchart?oid=1845603040&format=interactive"></iframe>
             <p class="chart-container__description">Descripcion de Grafico Asignaciones</p>
         </div>
 
-        <div class="chart-container" id="chart2">
+        <div class="chart-container" id="chart4">
             <div class="chart-container__header">
-                <h3 class="chart-container__title">Canales</h2>
+                <h3 class="chart-container__title">Por Periodicidad</h2>
                 <div class="chart-container__select-container">
-                    <label for="canales-select" class="canales-select__label">Seleccione tipo</label>
-                    <select name="canal" id="canales-select" class="canales-select__dropdown">
-                        <option value="SMS">SMS</option>
-                        <option value="PUSH">PUSH</option>
-                        <option value="MAIL">MAIL</option>
+                    <label for="periodicidad-select" class="periodicidad-select__label">Seleccione por tipo</label>
+                    <select name="periodicidad" id="periodicidad-select" class="periodicidad-select__dropdown">
+                        <option value="aDemanda">A demanda</option>
+                        <option value="Diaria">Diaria</option>
+                        <option value="Eventual">Eventual</option>
+                        <option value="Mensual">Mensual</option>
                     </select>
                 </div>
             </div>
-            <!-- Gráfico 2 de Google Sheets -->
-            <iframe class="chart-container__iframe" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSs-EbAhYXIdRzTfTjPYEDJrSe5Jw3WvD17FMyZVopUbjDFBsc8cRiLZQDeFejoYg/pubchart?oid=1755801386&format=interactive"></iframe>
+            <iframe class="chart-container__iframe" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTo0Ygg87eW3QuRh0dXy5Z3v_AmGJreCeXnvV_1fIa5SSAmbY44jlIzBWVVKv3NU26JHsPDQaL1LHXC/pubchart?oid=744059156&format=interactive"></iframe>
             <p class="chart-container__description">Descripcion de Grafico Canales</p>
         </div>
-
-
     </div>
+
     <script src="js/index.js"></script>
 </body>
 </html>
