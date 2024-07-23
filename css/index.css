@@ -76,24 +76,24 @@ body {
     color: aquamarine;
     border: 1px 2px 3px solid;
     border-top: aquamarine;
-    height: 9%;
 }
 
 .chart-container__select-container{
     display:flex;
-    width: 50%;
+    width: 90%;
     justify-content: right;
     align-items: center;
     margin-right: 10px;
 }
 
-.canales-select__label{
-    font-weight: bold;
+.periodicidad-select__label, .comunicacion-select__label{
+    font-weight: light;
     margin-right: 10px;
+    color: white;
 }
 
-.canales-select__dropdown{
-    height: 50%;
+.periodicidad-select__dropdown, .comunicacion-select__dropdown{
+    height: 70%;
 }
 
 .chart-container__description {
