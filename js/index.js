@@ -1,11 +1,30 @@
 document.addEventListener('DOMContentLoaded', function() {
+   const periodicidadSelect = document.getElementById('comunicacion-select');
+   const chartIframe = document.querySelector('#chart2 .chart-container__iframe');
+   const chartUrls = {
+      asignaciones: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTo0Ygg87eW3QuRh0dXy5Z3v_AmGJreCeXnvV_1fIa5SSAmbY44jlIzBWVVKv3NU26JHsPDQaL1LHXC/pubchart?oid=1411195835&format=interactive',
+      previsional: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTo0Ygg87eW3QuRh0dXy5Z3v_AmGJreCeXnvV_1fIa5SSAmbY44jlIzBWVVKv3NU26JHsPDQaL1LHXC/pubchart?oid=1999240229&format=interactive',
+      tramitesYservicios: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTo0Ygg87eW3QuRh0dXy5Z3v_AmGJreCeXnvV_1fIa5SSAmbY44jlIzBWVVKv3NU26JHsPDQaL1LHXC/pubchart?oid=744059156&format=interactive',
+      programas: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTo0Ygg87eW3QuRh0dXy5Z3v_AmGJreCeXnvV_1fIa5SSAmbY44jlIzBWVVKv3NU26JHsPDQaL1LHXC/pubchart?oid=744059156&format=interactive',
+      organismoExternos: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTo0Ygg87eW3QuRh0dXy5Z3v_AmGJreCeXnvV_1fIa5SSAmbY44jlIzBWVVKv3NU26JHsPDQaL1LHXC/pubchart?oid=744059156&format=interactive'
+   };
+   // Agregar un event listener al dropdown para detectar cambios
+   periodicidadSelect.addEventListener('change', function() {
+       // Obtener el valor seleccionado del dropdown
+       const selectedOption = periodicidadSelect.value;
+       // Actualizar el src del iframe con la URL correspondiente
+       chartIframe.src = chartUrls[selectedOption];
+   });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
     const periodicidadSelect = document.getElementById('periodicidad-select');
     const chartIframe = document.querySelector('#chart4 .chart-container__iframe');
     const chartUrls = {
       aDemanda: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTo0Ygg87eW3QuRh0dXy5Z3v_AmGJreCeXnvV_1fIa5SSAmbY44jlIzBWVVKv3NU26JHsPDQaL1LHXC/pubchart?oid=744059156&format=interactive',
-      Diaria: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTo0Ygg87eW3QuRh0dXy5Z3v_AmGJreCeXnvV_1fIa5SSAmbY44jlIzBWVVKv3NU26JHsPDQaL1LHXC/pubchart?oid=1418436833&format=interactive',
-      Eventual: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTo0Ygg87eW3QuRh0dXy5Z3v_AmGJreCeXnvV_1fIa5SSAmbY44jlIzBWVVKv3NU26JHsPDQaL1LHXC/pubchart?oid=1363399549&format=interactive',
-      Mensual: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTo0Ygg87eW3QuRh0dXy5Z3v_AmGJreCeXnvV_1fIa5SSAmbY44jlIzBWVVKv3NU26JHsPDQaL1LHXC/pubchart?oid=881729646&format=interactive'
+      diaria: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTo0Ygg87eW3QuRh0dXy5Z3v_AmGJreCeXnvV_1fIa5SSAmbY44jlIzBWVVKv3NU26JHsPDQaL1LHXC/pubchart?oid=1418436833&format=interactive',
+      eventual: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTo0Ygg87eW3QuRh0dXy5Z3v_AmGJreCeXnvV_1fIa5SSAmbY44jlIzBWVVKv3NU26JHsPDQaL1LHXC/pubchart?oid=1363399549&format=interactive',
+      mensual: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTo0Ygg87eW3QuRh0dXy5Z3v_AmGJreCeXnvV_1fIa5SSAmbY44jlIzBWVVKv3NU26JHsPDQaL1LHXC/pubchart?oid=881729646&format=interactive'
     };
     // Agregar un event listener al dropdown para detectar cambios
     periodicidadSelect.addEventListener('change', function() {
@@ -49,3 +68,4 @@ Explicación detallada:
    - Actualizar el src del iframe con la URL correspondiente
    Se actualiza el atributo 'src' del iframe con la URL correspondiente del objeto chartUrls según la opción seleccionada.
 */
+
