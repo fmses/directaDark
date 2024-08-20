@@ -22,6 +22,16 @@ body {
     background-image: url(../images/Bgd_PRG_baja.jpg);
 }
 
+/* Agregar estilo para el contenedor del gráfico Lightweight Charts */
+#chartLight {
+    width: 100%; /* Asegura que el gráfico se ajuste al ancho del contenedor */
+    height: 270px; /* Igualar la altura a la de los gráficos embebidos */
+    max-width: 640px; /* Opcional: Establece un ancho máximo para el gráfico */
+    max-height: 270px; /* Opcional: Establece una altura máxima para el gráfico */
+    border-radius: 5px; /* Igualar al estilo de los gráficos embebidos */
+    box-shadow: 0 0 5px rgba(190, 190, 190, 0.5); /* Similar al estilo de los gráficos embebidos */
+    background-color: rgba(80, 80, 80, 0.3); /* Fondo similar al de los gráficos embebidos */
+}
 
 
 .container {
