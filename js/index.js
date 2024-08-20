@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 const sheetId = "1FdJvovQ4eRm1gCTloREvtR6PCFRPBfCvF9wpdL0GhfA";
-const range = "19_08!A2:B";
+const range = "19_08!J2,H2";
 const apiKey = "AIzaSyCj0UiXehWoiDjv06RErEB17wJ8Milb9EE";
 
 fetch(
@@ -58,26 +58,35 @@ fetch(
   .then((response) => response.json())
   .then((data) => {
     const formattedData = data.values.map((row) => ({
-      time: row[0], // Asegúrate de que la fecha esté en formato 'YYYY-MM-DD'
-      value: parseFloat(row[1]),
+      time: new Date (row[0]), // Columna J "Dia" en formato fecha.
+      value: parseFloat(row[1], 10), // Columna H "Envíos válidos" en formato numero
     }));
     lineSeries.setData(formattedData);
   })
   .catch((error) => console.error("Error fetching data:", error));
 
+  
 // Crear el gráfico
-const chart = LightweightCharts.createChart(
-  document.getElementById("chartLight"),
-  {
-    width: document.getElementById("chartLight").clientWidth, // Ajuste el ancho dinámicamente
-    height: 270, // Igualar altura con la de los gráficos embebidos
-    timeScale: {
+const chart = LightweightCharts.createChart(document.getElementById("chartLight"), {
+  width: 640, // Ajusta el tamaño según el resto de tus gráficos
+  height: 270, // Asegúrate de que sea consistente
+  timeScale: {
       timeVisible: true,
       secondsVisible: false,
-    },
-  }
-);
-
+  },
+  layout: {
+      backgroundColor: '#f4f4f4', // Para que coincida con el fondo de tu página
+      textColor: 'black',
+  },
+  grid: {
+      vertLines: {
+          color: 'rgba(197, 203, 206, 0.5)',
+      },
+      horzLines: {
+          color: 'rgba(197, 203, 206, 0.5)',
+      },
+  },
+});
 // Agregar una serie de líneas (line chart)
 const lineSeries = chart.addLineSeries({
   color: "blue", // Puedes cambiar el color de la línea según tus preferencias
